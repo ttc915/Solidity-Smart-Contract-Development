@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.19; // stating our vesion
+pragma solidity 0.8.24; // stating our vesion
 
 contract SimpleStorage {
     // Basic types: boolen, uint, int, address, bytes
