@@ -10,13 +10,14 @@ contract SimpleStorage {
         uint256 favoriteNumber;
         string name;
     }
+    // Person public pat = Person(6, "Pat");
+    // Person public mariah = Person({favoriteNumber : 7, name : "Mariah"});
 
     // dynamic array
     Person[] public listOfPeople; // []
 
-    // Person public pat = Person(6, "Pat");
-    // Person public mariah = Person({favoriteNumber : 7, name : "Mariah"});
-
+    // chelsea -> 232
+    mapping (string => uint256) public nameToFavoriteNumber; // {key : value)
 
     function store(uint256 _favorite_number ) public {
         myFavoriteNumber = _favorite_number;
@@ -24,11 +25,13 @@ contract SimpleStorage {
     }
 
     // view, pure
-    function retrive() public view returns (uint256) {
+    function retrieve() public view returns (uint256) {
         return myFavoriteNumber;
     }
 
+    // calldata, memory, storage
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         listOfPeople.push( Person( _favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
