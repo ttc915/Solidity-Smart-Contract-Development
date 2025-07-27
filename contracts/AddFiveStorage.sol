@@ -8,7 +8,7 @@ contract AddFiveStorage is SimpleStorage{
     // override
     // virtual override
     function store(uint256 _number) public override {
-
+        myFavoriteNumber = _number + 5;
     }
     
 }

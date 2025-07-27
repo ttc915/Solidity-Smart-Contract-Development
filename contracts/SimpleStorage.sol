@@ -21,7 +21,7 @@ contract SimpleStorage {
     // chelsea -> 232
     mapping (string => uint256) public nameToFavoriteNumber; // {key : value)
 
-    function store(uint256 _favorite_number ) public {
+    function store(uint256 _favorite_number ) public virtual {
         myFavoriteNumber = _favorite_number;
 
     }
